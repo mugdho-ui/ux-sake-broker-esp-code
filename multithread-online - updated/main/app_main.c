@@ -717,7 +717,12 @@ void app_main(void) {
     
     // Initialize hardware
     ESP_ERROR_CHECK(dht22_init());
-    ESP_ERROR_CHECK(ds18b20_init());
+    // ESP_ERROR_CHECK(ds18b20_init());
+    esp_err_t err = ds18b20_init();
+if (err != ESP_OK) {
+    ESP_LOGW("APP_MAIN", "DS18B20 not detected, continuing without it");
+}
+
     ESP_ERROR_CHECK(mq135_init());
     ESP_ERROR_CHECK(ultrasonic_init());
     ESP_ERROR_CHECK(motor_controller_init());
