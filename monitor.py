@@ -14,7 +14,7 @@ USERNAME = "admin"         # .env এ যেটা সেট করেছো
 PASSWORD = "StrongPassword123"
 SEN1_TOPIC = "CO2"
 SEN2_TOPIC = "ESP"
-SEN3_TOPIC = "bowlT"
+SEN3_TOPIC = "sugarT"
 SEN4_TOPIC = "level"
 
 # CA_CERT = "broker.crt"     # ব্রোকারের certificate (CA বা self-signed cert)

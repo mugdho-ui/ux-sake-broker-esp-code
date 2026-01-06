@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "practise-test2",
-    "project_version":    "a2f199b-dirty",
+    "project_version":    "2e5bef2-dirty",
     "project_path":       "D:/mugdho/japan office/esp32Final/final",
     "idf_path":           "D:/mugdho/Espressif/frameworks/esp-idf-v5.5",
     "build_dir":          "D:/mugdho/japan office/esp32Final/final/build",
