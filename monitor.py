@@ -17,7 +17,7 @@ SEN2_TOPIC = "ESP"
 SEN3_TOPIC = "sugarT"
 SEN4_TOPIC = "level"
 
-# CA_CERT = "broker.crt"     # ব্রোকারের certificate (CA বা self-signed cert)
+
 
 # ---------- MQTT Callbacks ----------
 def on_connect(client, userdata, flags, rc):
@@ -43,14 +43,7 @@ def on_message(client, userdata, msg):
 client = mqtt.Client(client_id="py_subscriber_001", clean_session=True)
 client.username_pw_set(USERNAME, PASSWORD)
 
-# # Enable TLS
-# client.tls_set(
-#     ca_certs=CA_CERT,
-#     certfile=None,
-#     keyfile=None,
-#     tls_version=ssl.PROTOCOL_TLSv1_2
-# )
-# client.tls_insecure_set(True)  # self-signed হলে allow করবে
+
 
 client.on_connect = on_connect
 client.on_message = on_message

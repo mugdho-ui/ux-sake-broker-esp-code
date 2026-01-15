@@ -225,7 +225,7 @@ static esp_err_t mqtt_event_handler_cb(esp_mqtt_event_handle_t event) {
                 if (value > 30) mqtt_publish("CO2T", "AF");
                 else mqtt_publish("CO2T", "CF");
             }
-            else if (strcmp(topic, "bowl") == 0) {
+            else if (strcmp(topic, "ds18") == 0) {
                 if (value > 30) mqtt_publish("bowlT", "FO");
                 else mqtt_publish("bowlT", "FS");
             }

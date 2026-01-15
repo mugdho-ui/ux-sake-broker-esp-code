@@ -1,7 +1,5 @@
 import paho.mqtt.client as mqtt
 import datetime
-import threading
-import ssl
 
 BROKER = "bdtmp.ultra-x.jp"  # বা তোমার PC-এর IP
 PORT = 1883  # Secure MQTT TLS port
@@ -11,7 +9,7 @@ PASSWORD = "StrongPassword123"
 SEN1_TOPIC = "CO2"
 
 
-# CA_CERT = "broker.crt"     # ব্রোকারের certificate (CA বা self-signed cert)
+
 
 # ---------- MQTT Callbacks ----------
 def on_connect(client, userdata, flags, rc):
@@ -32,14 +30,7 @@ def on_message(client, userdata, msg):
 client = mqtt.Client(client_id="py_subscriber_001", clean_session=True)
 client.username_pw_set(USERNAME, PASSWORD)
 
-# # Enable TLS
-# client.tls_set(
-#     ca_certs=CA_CERT,
-#     certfile=None,
-#     keyfile=None,
-#     tls_version=ssl.PROTOCOL_TLSv1_2
-# )
-# client.tls_insecure_set(True)  # self-signed হলে allow করবে
+
 
 client.on_connect = on_connect
 client.on_message = on_message
@@ -49,24 +40,7 @@ client.connect(BROKER, PORT, keepalive=60)
 client.loop_start()  # starts network loop in background
 
 
-# ---------- Publisher Function ----------
-# def publish_loop():
-#     try:
-#         while True:
-#             message = input("[publisher] Enter message to send: ")
-#             if message.strip() == "":
-#                 continue
-#             client.publish(TEXT_TOPIC, payload=message, qos=1)
-#             print(f"[publisher] Sent: {message}")
-#     except KeyboardInterrupt:
-#         print("\n[publisher] stopping...")
-#
-#
-# # Run publisher in separate thread so subscriber keeps working
-# publisher_thread = threading.Thread(target=publish_loop, daemon=True)
-# publisher_thread.start()
 
-# Keep main thread alive to continue receiving messages
 try:
     while True:
         import time

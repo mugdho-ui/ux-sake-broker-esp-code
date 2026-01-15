@@ -1,0 +1,24 @@
+{
+  "name": "japan-office",
+  "version": "1.0.0",
+  "description": "",
+  "main": "level.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NahianMugdho/ux-sake-broker-esp-code.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/NahianMugdho/ux-sake-broker-esp-code/issues"
+  },
+  "homepage": "https://github.com/NahianMugdho/ux-sake-broker-esp-code#readme",
+  "dependencies": {
+    "mqtt": "^5.14.1"
+  }
+}

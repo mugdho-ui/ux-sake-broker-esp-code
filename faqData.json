@@ -1,0 +1,394 @@
+{
+  "faq": {
+    "company_info": [
+      {
+        "question": {
+          "en": "What is ULTRA-X ASIA PACIFIC?",
+          "bn": "ULTRA-X ASIA PACIFIC কী?",
+          "ja": "ULTRA-X ASIA PACIFICとは何ですか？"
+        },
+        "answer": {
+          "en": "ULTRA-X ASIA PACIFIC (株式会社ウルトラエックス) is a company established in August 2000, specializing in PC tools, diagnostic solutions, data erasure, and IoT systems. Our head office is in Tokyo, and we have a Tanegashima Business Site in Kagoshima.",
+          "bn": "ULTRA-X ASIA PACIFIC (株式会社ウルトラエックス) একটি কোম্পানি যা আগস্ট ২০০০ সালে প্রতিষ্ঠিত হয়েছে, যা PC টুলস, ডায়াগনস্টিক সলিউশন, ডেটা ইরেজার এবং IoT সিস্টেমে বিশেষজ্ঞ। আমাদের প্রধান কার্যালয় টোকিওতে এবং কাগোশিমাতে তানেগাশিমা ব্যবসায়িক সাইট রয়েছে।",
+          "ja": "ULTRA-X ASIA PACIFIC（株式会社ウルトラエックス）は、2000年8月に設立された会社で、PCツール、診断ソリューション、データ消去、IoTシステムを専門としています。本社は東京にあり、鹿児島に種子島事業所があります。"
+        }
+      }
+    ],
+    "system_connection": [
+      {
+        "question": {
+          "en": "How do I connect the ESP32 to WiFi?",
+          "bn": "আমি কীভাবে ESP32 কে WiFi এর সাথে সংযুক্ত করব?",
+          "ja": "ESP32をWiFiに接続するにはどうすればよいですか？"
+        },
+        "answer": {
+          "en": "1. Give specific power to each module based on the circuit.\n2. After powering on, the ESP32 will blink fast with a blue LED.\n3. Connect ESP32 to your PC (one by one).\n4. Press the boot/uui button for 7 seconds.\n5. Check your PC - an access point (ESP32-Setup) will appear.\n6. Connect to it and go to http://192.168.4.1\n7. Enter your WiFi SSID and password.\n8. Wait 10-15 seconds. If blinking stops, WiFi is connected.",
+          "bn": "১. সার্কিটের উপর ভিত্তি করে প্রতিটি মডিউলে নির্দিষ্ট পাওয়ার দিন।\n২. পাওয়ার চালু করার পর, ESP32 নীল LED দিয়ে দ্রুত ব্লিংক করবে।\n৩. ESP32 কে আপনার PC এর সাথে সংযুক্ত করুন (একে একে)।\n৪. boot/uui বাটন ৭ সেকেন্ডের জন্য চাপুন।\n৫. আপনার PC চেক করুন - একটি অ্যাক্সেস পয়েন্ট (ESP32-Setup) দেখা যাবে।\n৬. এটির সাথে সংযুক্ত হন এবং http://192.168.4.1 এ যান।\n৭. আপনার WiFi SSID এবং পাসওয়ার্ড লিখুন।\n৮. ১০-১৫ সেকেন্ড অপেক্ষা করুন। ব্লিংক বন্ধ হলে, WiFi সংযুক্ত হয়েছে।",
+          "ja": "1. 回路に基づいて各モジュールに特定の電源を供給します。\n2. 電源を入れると、ESP32は青色LEDで速く点滅します。\n3. ESP32をPCに接続します（1つずつ）。\n4. boot/uuiボタンを7秒間押します。\n5. PCを確認すると、アクセスポイント（ESP32-Setup）が表示されます。\n6. 接続して http://192.168.4.1 にアクセスします。\n7. WiFiのSSIDとパスワードを入力します。\n8. 10〜15秒待ちます。点滅が止まれば、WiFiが接続されています。"
+        }
+      },
+      {
+        "question": {
+          "en": "How do I register and login to the system?",
+          "bn": "আমি কীভাবে সিস্টেমে রেজিস্টার এবং লগইন করব?",
+          "ja": "システムに登録してログインするにはどうすればよいですか？"
+        },
+        "answer": {
+          "en": "After connecting to WiFi, go to http://192.168.88.36:3000/en/register to create an account, then login. Wait for 2 minutes to synchronize all data.",
+          "bn": "WiFi এর সাথে সংযুক্ত হওয়ার পর, http://192.168.88.36:3000/en/register এ যান একটি অ্যাকাউন্ট তৈরি করতে, তারপর লগইন করুন। সমস্ত ডেটা সিঙ্ক্রোনাইজ করতে ২ মিনিট অপেক্ষা করুন।",
+          "ja": "WiFi接続後、http://192.168.88.36:3000/en/register にアクセスしてアカウントを作成し、ログインします。すべてのデータを同期するために2分間待ちます。"
+        }
+      },
+      {
+        "question": {
+          "en": "What software do I need to install?",
+          "bn": "আমাকে কোন সফটওয়্যার ইনস্টল করতে হবে?",
+          "ja": "どのソフトウェアをインストールする必要がありますか？"
+        },
+        "answer": {
+          "en": "You need:\n1. CH340 Driver (Windows 10+ has built-in drivers): Download from https://fs.keyestudio.com/CH340-WINDOWS\n2. ESP-IDF Tools (optional): https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/windows-setup.html\n3. Arduino IDE (for direct data monitoring): https://support.arduino.cc/hc/en-us/articles/360019833020-Download-and-install-Arduino-IDE",
+          "bn": "আপনার প্রয়োজন:\n১. CH340 ড্রাইভার (Windows 10+ এ বিল্ট-ইন ড্রাইভার আছে): https://fs.keyestudio.com/CH340-WINDOWS থেকে ডাউনলোড করুন\n২. ESP-IDF টুলস (ঐচ্ছিক): https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/windows-setup.html\n৩. Arduino IDE (সরাসরি ডেটা মনিটরিংয়ের জন্য): https://support.arduino.cc/hc/en-us/articles/360019833020-Download-and-install-Arduino-IDE",
+          "ja": "必要なもの:\n1. CH340ドライバー（Windows 10+には組み込みドライバーがあります）: https://fs.keyestudio.com/CH340-WINDOWS からダウンロード\n2. ESP-IDFツール（オプション）: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/windows-setup.html\n3. Arduino IDE（直接データ監視用）: https://support.arduino.cc/hc/en-us/articles/360019833020-Download-and-install-Arduino-IDE"
+        }
+      }
+    ],
+    "system_usage": [
+      {
+        "question": {
+          "en": "How do I use the dashboard?",
+          "bn": "আমি কীভাবে ড্যাশবোর্ড ব্যবহার করব?",
+          "ja": "ダッシュボードの使い方は？"
+        },
+        "answer": {
+          "en": "The dashboard displays:\n- Sensor rooms with real-time data\n- MQTT topics (temperature, humidity, bowl temperature, sugar/°Brix, sonar/water level)\n- Actuator controls (fan, pump)\n- AI camera feed for visual monitoring\n- Graphs showing trends over time\n- Environment control settings\nYou can monitor all fermentation parameters remotely from your mobile or computer.",
+          "bn": "ড্যাশবোর্ডে প্রদর্শিত হয়:\n- রিয়েল-টাইম ডেটা সহ সেন্সর রুম\n- MQTT টপিক (তাপমাত্রা, আর্দ্রতা, বোল তাপমাত্রা, চিনি/°Brix, সোনার/পানির স্তর)\n- অ্যাকচুয়েটর কন্ট্রোল (ফ্যান, পাম্প)\n- ভিজ্যুয়াল মনিটরিংয়ের জন্য AI ক্যামেরা ফিড\n- সময়ের সাথে প্রবণতা দেখানো গ্রাফ\n- পরিবেশ নিয়ন্ত্রণ সেটিংস\nআপনি আপনার মোবাইল বা কম্পিউটার থেকে দূরবর্তীভাবে সমস্ত ফার্মেন্টেশন প্যারামিটার মনিটর করতে পারেন।",
+          "ja": "ダッシュボードには以下が表示されます:\n- リアルタイムデータを持つセンサールーム\n- MQTTトピック（温度、湿度、タンク温度、糖度/°Brix、ソナー/水位）\n- アクチュエーター制御（ファン、ポンプ）\n- 視覚監視用AIカメラフィード\n- 経時的な傾向を示すグラフ\n- 環境制御設定\nモバイルまたはコンピューターから遠隔ですべての発酵パラメーターを監視できます。"
+        }
+      },
+      {
+        "question": {
+          "en": "What are the MQTT topics used in the system?",
+          "bn": "সিস্টেমে কোন MQTT টপিক ব্যবহার করা হয়?",
+          "ja": "システムで使用されているMQTTトピックは何ですか？"
+        },
+        "answer": {
+          "en": "The MQTT topics are:\n- 'level': Water Level (Ultrasonic/Sonar sensor)\n- 'ESPX': Room Temperature (DHT22)\n- 'ESP2X': Room Humidity (DHT22)\n- 'CO2': CO₂ Level (MQ135)\n- 'ds18': Bowl/Tank Temperature (DS18B20)",
+          "bn": "MQTT টপিকগুলি হল:\n- 'level': পানির স্তর (আল্ট্রাসনিক/সোনার সেন্সর)\n- 'ESPX': রুম তাপমাত্রা (DHT22)\n- 'ESP2X': রুম আর্দ্রতা (DHT22)\n- 'CO2': CO₂ স্তর (MQ135)\n- 'ds18': বোল/ট্যাংক তাপমাত্রা (DS18B20)",
+          "ja": "MQTTトピックは:\n- 'level': 水位（超音波/ソナーセンサー）\n- 'ESPX': 室温（DHT22）\n- 'ESP2X': 室内湿度（DHT22）\n- 'CO2': CO₂レベル（MQ135）\n- 'ds18': タンク/もろみ温度（DS18B20）"
+        }
+      },
+      {
+        "question": {
+          "en": "How do I monitor data directly on my PC?",
+          "bn": "আমি কীভাবে সরাসরি আমার PC তে ডেটা মনিটর করব?",
+          "ja": "PCで直接データを監視するにはどうすればよいですか？"
+        },
+        "answer": {
+          "en": "To get data directly on your PC:\n1. Install Arduino IDE\n2. Connect the microcontroller to your PC\n3. Select the correct port in Arduino IDE\n4. Open the Serial Monitor/Terminal\n5. The sensor data will be displayed in real-time",
+          "bn": "সরাসরি আপনার PC তে ডেটা পেতে:\n১. Arduino IDE ইনস্টল করুন\n২. মাইক্রোকন্ট্রোলারকে আপনার PC এর সাথে সংযুক্ত করুন\n৩. Arduino IDE তে সঠিক পোর্ট নির্বাচন করুন\n৪. Serial Monitor/Terminal খুলুন\n৫. সেন্সর ডেটা রিয়েল-টাইমে প্রদর্শিত হবে",
+          "ja": "PCで直接データを取得するには:\n1. Arduino IDEをインストールします\n2. マイコンをPCに接続します\n3. Arduino IDEで正しいポートを選択します\n4. シリアルモニター/ターミナルを開きます\n5. センサーデータがリアルタイムで表示されます"
+        }
+      }
+    ],
+    "brewing_knowledge": [
+      {
+        "question": {
+          "en": "What are the optimal fermentation conditions?",
+          "bn": "সর্বোত্তম ফার্মেন্টেশন অবস্থা কী?",
+          "ja": "最適な発酵条件は何ですか？"
+        },
+        "answer": {
+          "en": "Optimal conditions are:\n- Bowl/Tank Temperature: 8-18°C\n- Room Temperature: 30-45°C\n- Room Humidity: 50-60%\n- CO₂: 1000-5000 ppm indicates active fermentation\n- Sugar/°Brix: ≥10 for ongoing fermentation",
+          "bn": "সর্বোত্তম অবস্থা হল:\n- বোল/ট্যাংক তাপমাত্রা: 8-18°C\n- রুম তাপমাত্রা: 30-45°C\n- রুম আর্দ্রতা: 50-60%\n- CO₂: 1000-5000 ppm সক্রিয় ফার্মেন্টেশন নির্দেশ করে\n- চিনি/°Brix: চলমান ফার্মেন্টেশনের জন্য ≥10",
+          "ja": "最適条件は:\n- タンク/もろみ温度: 8-18°C\n- 室温: 30-45°C\n- 室内湿度: 50-60%\n- CO₂: 1000-5000 ppmは活発な発酵を示します\n- 糖度/°Brix: 発酵継続には≥10"
+        }
+      },
+      {
+        "question": {
+          "en": "How do I interpret CO₂ levels?",
+          "bn": "আমি কীভাবে CO₂ স্তর ব্যাখ্যা করব?",
+          "ja": "CO₂レベルをどのように解釈しますか？"
+        },
+        "answer": {
+          "en": "CO₂ levels indicate yeast activity:\n- <1000 ppm: Fermentation is OFF or not started\n- 1000-5000 ppm: Active fermentation (Normal)\n- >5000 ppm: Excessive fermentation (requires attention)\nThe more yeast works, the more CO₂ is produced.",
+          "bn": "CO₂ স্তর খমিরের কার্যকলাপ নির্দেশ করে:\n- <1000 ppm: ফার্মেন্টেশন বন্ধ বা শুরু হয়নি\n- 1000-5000 ppm: সক্রিয় ফার্মেন্টেশন (স্বাভাবিক)\n- >5000 ppm: অতিরিক্ত ফার্মেন্টেশন (মনোযোগ প্রয়োজন)\nখমির যত বেশি কাজ করে, তত বেশি CO₂ উৎপন্ন হয়।",
+          "ja": "CO₂レベルは酵母の活動を示します:\n- <1000 ppm: 発酵がOFFまたは開始していません\n- 1000-5000 ppm: 活発な発酵（正常）\n- >5000 ppm: 過剰な発酵（注意が必要）\n酵母が働くほど、CO₂が多く生成されます。"
+        }
+      },
+      {
+        "question": {
+          "en": "What does sugar/°Brix level indicate?",
+          "bn": "চিনি/°Brix স্তর কী নির্দেশ করে?",
+          "ja": "糖度/°Brixレベルは何を示しますか？"
+        },
+        "answer": {
+          "en": "Sugar/°Brix level shows fermentation progress:\n- <10: Sugar has ended, fermentation may be complete\n- ≥10: Fermentation is OFF or paused, sugar still available\nAs yeast consumes sugar, the °Brix level decreases.",
+          "bn": "চিনি/°Brix স্তর ফার্মেন্টেশনের অগ্রগতি দেখায়:\n- <10: চিনি শেষ হয়েছে, ফার্মেন্টেশন সম্পূর্ণ হতে পারে\n- ≥10: ফার্মেন্টেশন বন্ধ বা বিরাম, চিনি এখনও উপলব্ধ\nখমির চিনি খাওয়ার সাথে সাথে °Brix স্তর হ্রাস পায়।",
+          "ja": "糖度/°Brixレベルは発酵の進行を示します:\n- <10: 糖分が終了、発酵が完了している可能性があります\n- ≥10: 発酵がOFFまたは一時停止、糖分がまだ利用可能\n酵母が糖を消費すると、°Brixレベルが減少します。"
+        }
+      }
+    ],
+    "sensors_and_monitoring": [
+      {
+        "question": {
+          "en": "What sensors are used in the system?",
+          "bn": "সিস্টেমে কোন সেন্সর ব্যবহার করা হয়?",
+          "ja": "システムではどのセンサーが使用されていますか？"
+        },
+        "answer": {
+          "en": "The system uses:\n- DHT22: Measures room temperature and humidity\n- DS18B20: Measures bowl/tank temperature (liquid/mash)\n- MQ135: Measures CO₂ levels (gas production)\n- Ultrasonic/Sonar: Measures water/mash level\n- Camera: Visual monitoring of foam and mash condition",
+          "bn": "সিস্টেম ব্যবহার করে:\n- DHT22: রুমের তাপমাত্রা এবং আর্দ্রতা পরিমাপ করে\n- DS18B20: বোল/ট্যাংক তাপমাত্রা (তরল/মাশ) পরিমাপ করে\n- MQ135: CO₂ স্তর (গ্যাস উৎপাদন) পরিমাপ করে\n- আল্ট্রাসনিক/সোনার: পানি/মাশের স্তর পরিমাপ করে\n- ক্যামেরা: ফোম এবং মাশের অবস্থার ভিজ্যুয়াল মনিটরিং",
+          "ja": "システムは以下を使用します:\n- DHT22: 室温と湿度を測定\n- DS18B20: タンク/もろみ温度（液体）を測定\n- MQ135: CO₂レベル（ガス生成）を測定\n- 超音波/ソナー: 水/もろみレベルを測定\n- カメラ: 泡ともろみの状態の視覚監視"
+        }
+      },
+      {
+        "question": {
+          "en": "Why is temperature monitoring important?",
+          "bn": "তাপমাত্রা মনিটরিং কেন গুরুত্বপূর্ণ?",
+          "ja": "温度監視がなぜ重要なのですか？"
+        },
+        "answer": {
+          "en": "Temperature is critical because yeast is very sensitive during fermentation. Even slight changes in liquid temperature can alter the taste of sake. The DS18B20 directly measures the mash temperature, while DHT22 ensures the room environment is suitable for fermentation. This helps control air conditioning or ventilation.",
+          "bn": "তাপমাত্রা গুরুত্বপূর্ণ কারণ ফার্মেন্টেশনের সময় খমির অত্যন্ত সংবেদনশীল। তরল তাপমাত্রায় সামান্য পরিবর্তন সাকের স্বাদ পরিবর্তন করতে পারে। DS18B20 সরাসরি মাশের তাপমাত্রা পরিমাপ করে, যখন DHT22 নিশ্চিত করে যে রুমের পরিবেশ ফার্মেন্টেশনের জন্য উপযুক্ত। এটি এয়ার কন্ডিশনিং বা বায়ুচলাচল নিয়ন্ত্রণে সাহায্য করে।",
+          "ja": "温度は、発酵中に酵母が非常に敏感であるため重要です。液体温度のわずかな変化でも、日本酒の味を変える可能性があります。DS18B20はもろみの温度を直接測定し、DHT22は室内環境が発酵に適していることを確認します。これにより、空調や換気の制御に役立ちます。"
+        }
+      },
+      {
+        "question": {
+          "en": "How does the AI camera help?",
+          "bn": "AI ক্যামেরা কীভাবে সাহায্য করে?",
+          "ja": "AIカメラはどのように役立ちますか？"
+        },
+        "answer": {
+          "en": "The camera visually monitors the foam and condition on top of the mash without directly touching it. In the future, these videos or images can be analyzed with AI to detect abnormalities, predict fermentation stages, and provide insights that complement sensor data.",
+          "bn": "ক্যামেরা সরাসরি স্পর্শ না করে মাশের উপরের ফোম এবং অবস্থা ভিজ্যুয়ালি মনিটর করে। ভবিষ্যতে, এই ভিডিও বা ছবিগুলি AI দিয়ে বিশ্লেষণ করা যেতে পারে অস্বাভাবিকতা সনাক্ত করতে, ফার্মেন্টেশন পর্যায়ের পূর্বাভাস দিতে এবং সেন্সর ডেটার পরিপূরক অন্তর্দৃষ্টি প্রদান করতে।",
+          "ja": "カメラは、もろみに直接触れることなく、表面の泡や状態を視覚的に監視します。将来的には、これらのビデオや画像をAIで分析して、異常を検出し、発酵段階を予測し、センサーデータを補完する洞察を提供できます。"
+        }
+      }
+    ],
+    "troubleshooting": [
+      {
+        "question": {
+          "en": "The ESP32 won't connect to WiFi. What should I do?",
+          "bn": "ESP32 WiFi এর সাথে সংযুক্ত হচ্ছে না। আমার কী করা উচিত?",
+          "ja": "ESP32がWiFiに接続しません。どうすればよいですか？"
+        },
+        "answer": {
+          "en": "Try these steps:\n1. Ensure the ESP32 is powered correctly\n2. Press and hold the boot/uui button for 7 seconds again\n3. Make sure you entered the correct WiFi SSID and password\n4. Check if your WiFi network is 2.4GHz (ESP32 doesn't support 5GHz)\n5. Wait 15-20 seconds for connection\n6. If the blue LED continues blinking, restart the process",
+          "bn": "এই পদক্ষেপগুলি চেষ্টা করুন:\n১. নিশ্চিত করুন যে ESP32 সঠিকভাবে পাওয়ার পাচ্ছে\n২. boot/uui বাটন আবার ৭ সেকেন্ডের জন্য চাপুন এবং ধরে রাখুন\n৩. নিশ্চিত করুন যে আপনি সঠিক WiFi SSID এবং পাসওয়ার্ড লিখেছেন\n৪. চেক করুন আপনার WiFi নেটওয়ার্ক 2.4GHz কিনা (ESP32 5GHz সমর্থন করে না)\n৫. সংযোগের জন্য ১৫-২০ সেকেন্ড অপেক্ষা করুন\n৬. নীল LED ব্লিংক চালিয়ে গেলে, প্রক্রিয়াটি পুনরায় শুরু করুন",
+          "ja": "次の手順を試してください:\n1. ESP32が正しく電源供給されていることを確認します\n2. boot/uuiボタンを再び7秒間押し続けます\n3. 正しいWiFi SSIDとパスワードを入力したことを確認します\n4. WiFiネットワークが2.4GHzであることを確認します（ESP32は5GHzをサポートしていません）\n5. 接続まで15〜20秒待ちます\n6. 青色LEDが点滅し続ける場合は、プロセスを再起動します"
+        }
+      },
+      {
+        "question": {
+          "en": "Data is not showing on the dashboard. What's wrong?",
+          "bn": "ড্যাশবোর্ডে ডেটা দেখাচ্ছে না। কী সমস্যা?",
+          "ja": "ダッシュボードにデータが表示されません。何が問題ですか？"
+        },
+        "answer": {
+          "en": "Check the following:\n1. Ensure all sensors are properly connected according to the circuit\n2. Verify that ESP32 is connected to WiFi (LED should not be blinking)\n3. Wait 2 minutes after login for data synchronization\n4. Check if the MQTT broker is running\n5. Verify the database connection\n6. Restart the microcontroller if needed\n7. Use Arduino IDE to check if sensors are sending data to the serial monitor",
+          "bn": "নিম্নলিখিতগুলি চেক করুন:\n১. নিশ্চিত করুন যে সমস্ত সেন্সর সার্কিট অনুযায়ী সঠিকভাবে সংযুক্ত আছে\n২. যাচাই করুন যে ESP32 WiFi এর সাথে সংযুক্ত (LED ব্লিংক করা উচিত নয়)\n৩. লগইনের পর ডেটা সিঙ্ক্রোনাইজেশনের জন্য ২ মিনিট অপেক্ষা করুন\n৪. চেক করুন MQTT ব্রোকার চলছে কিনা\n৫. ডেটাবেস সংযোগ যাচাই করুন\n৬. প্রয়োজন হলে মাইক্রোকন্ট্রোলার রিস্টার্ট করুন\n৭. Arduino IDE ব্যবহার করে চেক করুন সেন্সরগুলি সিরিয়াল মনিটরে ডেটা পাঠাচ্ছে কিনা",
+          "ja": "以下を確認してください:\n1. すべてのセンサーが回路に従って正しく接続されていることを確認します\n2. ESP32がWiFiに接続されていることを確認します（LEDが点滅していないはず）\n3. ログイン後、データ同期のために2分間待ちます\n4. MQTTブローカーが実行されているか確認します\n5. データベース接続を確認します\n6. 必要に応じてマイコンを再起動します\n7. Arduino IDEを使用して、センサーがシリアルモニターにデータを送信しているか確認します"
+        }
+      },
+      {
+        "question": {
+          "en": "How do I know if fermentation is progressing normally?",
+          "bn": "আমি কীভাবে জানব ফার্মেন্টেশন স্বাভাবিকভাবে অগ্রসর হচ্ছে?",
+          "ja": "発酵が正常に進んでいるかどうかをどのように知ることができますか？"
+        },
+        "answer": {
+          "en": "Normal fermentation indicators:\n- CO₂ level: 1000-5000 ppm (active yeast activity)\n- Bowl temperature: 8-18°C (stable)\n- Room temperature: 30-45°C\n- Room humidity: 50-60%\n- Sugar/°Brix: Gradually decreasing from ≥10\n- Water level: Stable or slowly decreasing\n- Camera shows active foam formation\nIf any parameter goes outside these ranges, the system will alert you.",
+          "bn": "স্বাভাবিক ফার্মেন্টেশনের সূচক:\n- CO₂ স্তর: 1000-5000 ppm (সক্রিয় খমিরের কার্যকলাপ)\n- বোল তাপমাত্রা: 8-18°C (স্থিতিশীল)\n- রুম তাপমাত্রা: 30-45°C\n- রুম আর্দ্রতা: 50-60%\n- চিনি/°Brix: ≥10 থেকে ধীরে ধীরে হ্রাস\n- পানির স্তর: স্থিতিশীল বা ধীরে ধীরে হ্রাস\n- ক্যামেরা সক্রিয় ফোম গঠন দেখায়\nযদি কোনো প্যারামিটার এই পরিসীমার বাইরে যায়, সিস্টেম আপনাকে সতর্ক করবে।",
+          "ja": "正常な発酵の指標:\n- CO₂レベル: 1000-5000 ppm（活発な酵母活動）\n- タンク温度: 8-18°C（安定）\n- 室温: 30-45°C\n- 室内湿度: 50-60%\n- 糖度/°Brix: ≥10から徐々に減少\n- 水位: 安定またはゆっくり減少\n- カメラが活発な泡の形成を示す\nパラメーターがこれらの範囲外になると、システムが警告します。"
+        }
+      }
+    ],
+    "actuators_and_control": [
+      {
+        "question": {
+          "en": "How do the actuators work?",
+          "bn": "অ্যাকচুয়েটরগুলি কীভাবে কাজ করে?",
+          "ja": "アクチュエーターはどのように機能しますか？"
+        },
+        "answer": {
+          "en": "The system has two main actuators:\n1. **Cooling Fan**: Automatically turns on when room or bowl temperature exceeds optimal range to cool the environment\n2. **Water Pump**: Activates when water level is low or when steamed rice needs to be added\nYou can also manually control these from the dashboard. The system uses automated control to maintain optimal fermentation conditions.",
+          "bn": "সিস্টেমে দুটি প্রধান অ্যাকচুয়েটর রয়েছে:\n১. **কুলিং ফ্যান**: যখন রুম বা বোল তাপমাত্রা সর্বোত্তম পরিসীমা অতিক্রম করে তখন পরিবেশ ঠান্ডা করতে স্বয়ংক্রিয়ভাবে চালু হয়\n২. **ওয়াটার পাম্প**: যখন পানির স্তর কম থাকে বা যখন বাষ্পীভূত চাল যোগ করতে হয় তখন সক্রিয় হয়\nআপনি ড্যাশবোর্ড থেকে ম্যানুয়ালি এগুলি নিয়ন্ত্রণ করতে পারেন। সিস্টেম সর্বোত্তম ফার্মেন্টেশন অবস্থা বজায় রাখতে স্বয়ংক্রিয় নিয়ন্ত্রণ ব্যবহার করে।",
+          "ja": "システムには2つの主要なアクチュエーターがあります:\n1. **冷却ファン**: 室温またはタンク温度が最適範囲を超えると、環境を冷却するために自動的にオンになります\n2. **ウォーターポンプ**: 水位が低い場合、または蒸米を追加する必要がある場合に作動します\nダッシュボードから手動で制御することもできます。システムは最適な発酵条件を維持するために自動制御を使用します。"
+        }
+      },
+      {
+        "question": {
+          "en": "Can I manually control the fan and pump?",
+          "bn": "আমি কি ম্যানুয়ালি ফ্যান এবং পাম্প নিয়ন্ত্রণ করতে পারি?",
+          "ja": "ファンとポンプを手動で制御できますか？"
+        },
+        "answer": {
+          "en": "Yes! The dashboard provides manual control options for both actuators. You can override automatic control and turn the fan or pump on/off as needed. However, the system will provide warnings if manual settings might harm fermentation quality.",
+          "bn": "হ্যাঁ! ড্যাশবোর্ড উভয় অ্যাকচুয়েটরের জন্য ম্যানুয়াল নিয়ন্ত্রণ বিকল্প প্রদান করে। আপনি স্বয়ংক্রিয় নিয়ন্ত্রণ ওভাররাইড করতে এবং প্রয়োজন অনুযায়ী ফ্যান বা পাম্প চালু/বন্ধ করতে পারেন। তবে, ম্যানুয়াল সেটিংস ফার্মেন্টেশনের গুণমানের ক্ষতি করতে পারে কিনা তা সিস্টেম সতর্কতা প্রদান করবে।",
+          "ja": "はい！ダッシュボードは両方のアクチュエーターの手動制御オプションを提供します。自動制御を上書きして、必要に応じてファンやポンプをオン/オフできます。ただし、手動設定が発酵品質に害を及ぼす可能性がある場合、システムは警告を表示します。"
+        }
+      }
+    ],
+    "system_technical": [
+      {
+        "question": {
+          "en": "What technology powers the Sake-IoT system?",
+          "bn": "Sake-IoT সিস্টেম কোন প্রযুক্তি দ্বারা চালিত?",
+          "ja": "Sake-IoTシステムはどの技術で動作していますか？"
+        },
+        "answer": {
+          "en": "The system uses:\n- **AI**: Powered by Google Gemini for intelligent analysis\n- **Backend**: Node.js with MQTT protocol for real-time sensor communication\n- **Database**: MySQL for data storage\n- **Frontend**: Next.js and React for the web interface\n- **Hardware**: Arduino and ESP32 microcontrollers\n- **Connectivity**: WiFi and LoRa for data transmission\nDeveloped by the engineers of Ultra X BD.",
+          "bn": "সিস্টেম ব্যবহার করে:\n- **AI**: বুদ্ধিমান বিশ্লেষণের জন্য Google Gemini দ্বারা চালিত\n- **ব্যাকএন্ড**: রিয়েল-টাইম সেন্সর যোগাযোগের জন্য MQTT প্রোটোকল সহ Node.js\n- **ডেটাবেস**: ডেটা স্টোরেজের জন্য MySQL\n- **ফ্রন্টএন্ড**: ওয়েব ইন্টারফেসের জন্য Next.js এবং React\n- **হার্ডওয়্যার**: Arduino এবং ESP32 মাইক্রোকন্ট্রোলার\n- **সংযোগ**: ডেটা ট্রান্সমিশনের জন্য WiFi এবং LoRa\nUltra X BD এর ইঞ্জিনিয়ারদের দ্বারা তৈরি।",
+          "ja": "システムは以下を使用します:\n- **AI**: インテリジェント分析のためにGoogle Geminiで動作\n- **バックエンド**: リアルタイムセンサー通信のためのMQTTプロトコルを使用したNode.js\n- **データベース**: データストレージ用のMySQL\n- **フロントエンド**: Webインターフェース用のNext.jsとReact\n- **ハードウェア**: ArduinoとESP32マイコン\n- **接続**: データ送信用のWiFiとLoRa\nUltra X BDのエンジニアによって開発されました。"
+        }
+      },
+      {
+        "question": {
+          "en": "How does the system help sake brewers?",
+          "bn": "সিস্টেম সাকে ব্রুয়ারদের কীভাবে সাহায্য করে?",
+          "ja": "システムは酒造家をどのように支援しますか？"
+        },
+        "answer": {
+          "en": "The Sake-IoT system:\n- Simplifies the brewer's work by automating monitoring\n- Reduces the possibility of mistakes through real-time alerts\n- Enables remote monitoring from anywhere via mobile or computer\n- Provides historical data and trends for better decision-making\n- Supports traditional sake-making with modern technology\n- Never replaces human experience and expertise\nIt's a tool that empowers brewers while respecting the craft.",
+          "bn": "Sake-IoT সিস্টেম:\n- মনিটরিং স্বয়ংক্রিয় করে ব্রুয়ারের কাজ সহজ করে\n- রিয়েল-টাইম সতর্কতার মাধ্যমে ভুলের সম্ভাবনা হ্রাস করে\n- মোবাইল বা কম্পিউটারের মাধ্যমে যেকোনো জায়গা থেকে দূরবর্তী মনিটরিং সক্ষম করে\n- ভালো সিদ্ধান্ত নেওয়ার জন্য ঐতিহাসিক ডেটা এবং প্রবণতা প্রদান করে\n- আধুনিক প্রযুক্তির সাথে ঐতিহ্যবাহী সাকে তৈরিকে সমর্থন করে\n- মানুষের অভিজ্ঞতা এবং দক্ষতা কখনও প্রতিস্থাপন করে না\nএটি একটি টুল যা কারুশিল্পকে সম্মান করার সাথে সাথে ব্রুয়ারদের ক্ষমতায়ন করে।",
+          "ja": "Sake-IoTシステム:\n- 監視を自動化することで醸造家の作業を簡素化します\n- リアルタイムアラートを通じてミスの可能性を減らします\n- モバイルまたはコンピューターからどこからでも遠隔監視を可能にします\n- より良い意思決定のための履歴データと傾向を提供します\n- 伝統的な酒造りを現代技術でサポートします\n- 人間の経験と専門知識を決して置き換えません\nそれは、技術を尊重しながら醸造家に力を与えるツールです。"
+        }
+      },
+      {
+        "question": {
+          "en": "Is my fermentation data secure?",
+          "bn": "আমার ফার্মেন্টেশন ডেটা কি নিরাপদ?",
+          "ja": "発酵データは安全ですか？"
+        },
+        "answer": {
+          "en": "Yes, your data is secure. The system uses:\n- Encrypted WiFi connections\n- Secure MySQL database with access controls\n- User authentication for dashboard access\n- Local network operation (data stays within your facility)\n- Regular backups to prevent data loss\nYour brewing secrets and fermentation data remain confidential.",
+          "bn": "হ্যাঁ, আপনার ডেটা নিরাপদ। সিস্টেম ব্যবহার করে:\n- এনক্রিপ্টেড WiFi সংযোগ\n- অ্যাক্সেস কন্ট্রোল সহ সুরক্ষিত MySQL ডেটাবেস\n- ড্যাশবোর্ড অ্যাক্সেসের জন্য ব্যবহারকারী প্রমাণীকরণ\n- স্থানীয় নেটওয়ার্ক অপারেশন (ডেটা আপনার সুবিধার মধ্যে থাকে)\n- ডেটা হারানো রোধ করতে নিয়মিত ব্যাকআপ\nআপনার ব্রুইং গোপনীয়তা এবং ফার্মেন্টেশন ডেটা গোপনীয় থাকে।",
+          "ja": "はい、データは安全です。システムは以下を使用します:\n- 暗号化されたWiFi接続\n- アクセス制御を備えた安全なMySQLデータベース\n- ダッシュボードアクセスのためのユーザー認証\n- ローカルネットワーク運用（データは施設内に留まります）\n- データ損失を防ぐための定期的なバックアップ\n醸造の秘密と発酵データは機密のままです。"
+        }
+      }
+    ],
+    "general_usage": [
+      {
+        "question": {
+          "en": "Do I need technical knowledge to use this system?",
+          "bn": "এই সিস্টেম ব্যবহার করতে আমার কি প্রযুক্তিগত জ্ঞান প্রয়োজন?",
+          "ja": "このシステムを使用するには技術的知識が必要ですか？"
+        },
+        "answer": {
+          "en": "No extensive technical knowledge is required. The system is designed to be user-friendly:\n- Simple WiFi setup process\n- Intuitive dashboard interface\n- Clear visual indicators and graphs\n- Automated alerts and recommendations\n- This FAQ guide for common questions\nBasic computer or smartphone skills are sufficient. Focus on your brewing expertise!",
+          "bn": "না, বিস্তৃত প্রযুক্তিগত জ্ঞানের প্রয়োজন নেই। সিস্টেমটি ব্যবহারকারী-বান্ধব হওয়ার জন্য ডিজাইন করা হয়েছে:\n- সহজ WiFi সেটআপ প্রক্রিয়া\n- স্বজ্ঞাত ড্যাশবোর্ড ইন্টারফেস\n- স্পষ্ট ভিজ্যুয়াল সূচক এবং গ্রাফ\n- স্বয়ংক্রিয় সতর্কতা এবং সুপারিশ\n- সাধারণ প্রশ্নের জন্য এই FAQ গাইড\nমৌলিক কম্পিউটার বা স্মার্টফোন দক্ষতা যথেষ্ট। আপনার ব্রুইং দক্ষতার উপর ফোকাস করুন!",
+          "ja": "いいえ、広範な技術知識は必要ありません。システムはユーザーフレンドリーに設計されています:\n- シンプルなWiFiセットアッププロセス\n- 直感的なダッシュボードインターフェース\n- 明確な視覚的インジケーターとグラフ\n- 自動アラートと推奨事項\n- よくある質問のためのこのFAQガイド\n基本的なコンピューターまたはスマートフォンのスキルで十分です。醸造の専門知識に集中してください！"
+        }
+      },
+      {
+        "question": {
+          "en": "How often should I check the dashboard?",
+          "bn": "আমার কত ঘন ঘন ড্যাশবোর্ড চেক করা উচিত?",
+          "ja": "ダッシュボードをどのくらいの頻度で確認すべきですか？"
+        },
+        "answer": {
+          "en": "It depends on the fermentation stage:\n- **Early fermentation** (Days 1-3): Check 3-4 times daily as yeast activity is establishing\n- **Active fermentation** (Days 4-10): Check 2-3 times daily\n- **Late fermentation** (Days 10+): Once or twice daily\nThe system sends automatic alerts for critical issues, so you don't need to monitor constantly. Trust the system while maintaining your traditional observation routines.",
+          "bn": "এটি ফার্মেন্টেশন পর্যায়ের উপর নির্ভর করে:\n- **প্রাথমিক ফার্মেন্টেশন** (দিন ১-৩): দিনে ৩-৪ বার চেক করুন কারণ খমিরের কার্যকলাপ প্রতিষ্ঠিত হচ্ছে\n- **সক্রিয় ফার্মেন্টেশন** (দিন ৪-১০): দিনে ২-৩ বার চেক করুন\n- **দেরী ফার্মেন্টেশন** (দিন ১০+): দিনে একবার বা দুবার\nসিস্টেম গুরুত্বপূর্ণ সমস্যার জন্য স্বয়ংক্রিয় সতর্কতা পাঠায়, তাই আপনাকে ক্রমাগত মনিটর করার প্রয়োজন নেই। আপনার ঐতিহ্যবাহী পর্যবেক্ষণ রুটিন বজায় রেখে সিস্টেমে বিশ্বাস করুন।",
+          "ja": "発酵段階によって異なります:\n- **初期発酵**（1〜3日目）: 酵母活動が確立されるため、1日3〜4回確認します\n- **活発な発酵**（4〜10日目）: 1日2〜3回確認します\n- **後期発酵**（10日目以降）: 1日1〜2回\nシステムは重要な問題について自動アラートを送信するため、常に監視する必要はありません。伝統的な観察ルーチンを維持しながら、システムを信頼してください。"
+        }
+      },
+      {
+        "question": {
+          "en": "Can multiple people access the dashboard?",
+          "bn": "একাধিক ব্যক্তি কি ড্যাশবোর্ড অ্যাক্সেস করতে পারে?",
+          "ja": "複数の人がダッシュボードにアクセスできますか？"
+        },
+        "answer": {
+          "en": "Yes, multiple users can create accounts and access the dashboard simultaneously. This allows:\n- Brewing team collaboration\n- Shift handover with complete information\n- Remote monitoring by supervisors or owners\n- Training new brewers with live data\nEach user has their own login credentials for security.",
+          "bn": "হ্যাঁ, একাধিক ব্যবহারকারী অ্যাকাউন্ট তৈরি করতে এবং একযোগে ড্যাশবোর্ড অ্যাক্সেস করতে পারে। এটি অনুমতি দেয়:\n- ব্রুইং টিম সহযোগিতা\n- সম্পূর্ণ তথ্য সহ শিফট হস্তান্তর\n- সুপারভাইজার বা মালিকদের দ্বারা দূরবর্তী মনিটরিং\n- লাইভ ডেটা দিয়ে নতুন ব্রুয়ারদের প্রশিক্ষণ\nনিরাপত্তার জন্য প্রতিটি ব্যবহারকারীর নিজস্ব লগইন শংসাপত্র রয়েছে।",
+          "ja": "はい、複数のユーザーがアカウントを作成し、同時にダッシュボードにアクセスできます。これにより以下が可能になります:\n- 醸造チームのコラボレーション\n- 完全な情報を使用したシフト引き継ぎ\n- スーパーバイザーまたはオーナーによる遠隔監視\n- ライブデータを使用した新しい醸造家のトレーニング\nセキュリティのため、各ユーザーは独自のログイン資格情報を持ちます。"
+        }
+      },
+      {
+      "question": {
+        "en": "What should I do after completing registration?",
+        "bn": "রেজিস্ট্রেশন সম্পন্ন করার পর আমাকে কী করতে হবে?",
+        "ja": "登録完了後、何をすればよいですか？"
+      },
+      "answer": {
+        "en": "After completing registration, you must log in using your credentials. Once login is successful, the system will automatically display the dashboard.",
+        "bn": "রেজিস্ট্রেশন সম্পন্ন করার পর আপনাকে আপনার তথ্য ব্যবহার করে লগইন করতে হবে। সফলভাবে লগইন হলে ড্যাশবোর্ড স্বয়ংক্রিয়ভাবে প্রদর্শিত হবে।",
+        "ja": "登録が完了したら、認証情報を使用してログインしてください。ログインが成功すると、ダッシュボードが自動的に表示されます。"
+      }
+    },
+    {
+      "question": {
+        "en": "How do I create a new room to initialize sensors?",
+        "bn": "সেন্সর চালু করার জন্য আমি কীভাবে নতুন রুম তৈরি করব?",
+        "ja": "センサーを初期化するために新しいルームを作成するにはどうすればよいですか？"
+      },
+      "answer": {
+        "en": "To initialize sensors, you must create a new room from the Location Selector at the top of the left sidebar. Hover over it and select “Create New Room”, then enter a room name.",
+        "bn": "সেন্সর চালু করতে বাম পাশের সাইডবারের উপরের Location Selector থেকে একটি নতুন রুম তৈরি করতে হবে। সেখানে কার্সর রাখলে “Create New Room” অপশন দেখা যাবে। এটি নির্বাচন করে রুমের নাম লিখুন।",
+        "ja": "センサーを初期化するには、左サイドバー上部のロケーションセレクターから新しいルームを作成します。ホバーすると「Create New Room」が表示されるので選択し、ルーム名を入力してください。"
+      }
+    },
+    {
+      "question": {
+        "en": "What happens after I enter the room name?",
+        "bn": "রুমের নাম দেওয়ার পর কী হয়?",
+        "ja": "ルーム名を入力した後、何が起こりますか？"
+      },
+      "answer": {
+        "en": "After entering the room name, a modal window appears showing all available sensors. You must assign the correct MQTT topics to each sensor.",
+        "bn": "রুমের নাম দেওয়ার পর একটি মডাল উইন্ডো খুলবে যেখানে সমস্ত উপলব্ধ সেন্সর দেখানো হবে। প্রতিটি সেন্সরের জন্য সঠিক MQTT টপিক নির্ধারণ করতে হবে।",
+        "ja": "ルーム名を入力すると、利用可能なすべてのセンサーを表示するモーダルウィンドウが開きます。各センサーに対応する正しいMQTTトピックを割り当てる必要があります。"
+      }
+    },
+    {
+      "question": {
+        "en": "How do I start receiving sensor data in a new room?",
+        "bn": "নতুন রুমে সেন্সর ডেটা পাওয়া শুরু করব কীভাবে?",
+        "ja": "新しいルームでセンサーデータを受信するにはどうすればよいですか？"
+      },
+      "answer": {
+        "en": "After assigning all sensor topics, scroll to the bottom of the modal and click “Create Room and Subscribe”. Sensor data will start appearing in about one minute.",
+        "bn": "সব সেন্সরের টপিক নির্ধারণ করার পর মডালের নিচে স্ক্রল করে “Create Room and Subscribe” বোতামে ক্লিক করুন। প্রায় এক মিনিটের মধ্যে সেন্সর ডেটা আসা শুরু করবে।",
+        "ja": "すべてのセンサートピックを設定した後、モーダルの下までスクロールして「Create Room and Subscribe」をクリックします。約1分以内にセンサーデータが表示され始めます。"
+      }
+    },
+    {
+      "question": {
+        "en": "How can I control the fan speed from the dashboard?",
+        "bn": "ড্যাশবোর্ড থেকে আমি কীভাবে ফ্যানের গতি নিয়ন্ত্রণ করব?",
+        "ja": "ダッシュボードからファン速度を制御するにはどうすればよいですか？"
+      },
+      "answer": {
+        "en": "Fan speed can be controlled from the Environmental Control section using a knob-based interface. Adjust the knob to increase or decrease the fan speed.",
+        "bn": "Environmental Control সেকশনে থাকা নকব (knob) ইন্টারফেস ব্যবহার করে ফ্যানের গতি নিয়ন্ত্রণ করা যায়। নকব ঘুরিয়ে গতি বাড়ানো বা কমানো সম্ভব।",
+        "ja": "環境制御セクションにあるノブ型インターフェースを使用してファン速度を調整できます。ノブを回して速度を上げ下げしてください。"
+      }
+    },
+    {
+      "question": {
+        "en": "How is sensor data displayed on the dashboard?",
+        "bn": "ড্যাশবোর্ডে সেন্সর ডেটা কীভাবে দেখানো হয়?",
+        "ja": "ダッシュボードではセンサーデータはどのように表示されますか？"
+      },
+      "answer": {
+        "en": "Sensor data is displayed as charts in the center of the dashboard. You can choose to view a single chart or multiple charts at the same time.",
+        "bn": "ড্যাশবোর্ডের মাঝখানের অংশে চার্টের মাধ্যমে সেন্সর ডেটা দেখানো হয়। আপনি চাইলে একটি বা একাধিক চার্ট একসাথে দেখতে পারেন।",
+        "ja": "センサーデータはダッシュボード中央にチャートとして表示されます。1つのチャート、または複数のチャートを同時に表示することができます。"
+      }
+    },
+    {
+      "question": {
+        "en": "How can I change the language or theme of the dashboard?",
+        "bn": "আমি কীভাবে ড্যাশবোর্ডের ভাষা বা থিম পরিবর্তন করব?",
+        "ja": "ダッシュボードの言語やテーマを変更するにはどうすればよいですか？"
+      },
+      "answer": {
+        "en": "Language settings and Light/Dark mode can be changed from the Device Status section on the left sidebar.",
+        "bn": "বাম পাশের সাইডবারের Device Status সেকশন থেকে ভাষা সেটিংস এবং Light/Dark মোড পরিবর্তন করা যায়।",
+        "ja": "言語設定およびライトモード／ダークモードは、左サイドバーのデバイスステータスセクションから変更できます。"
+      }
+    }
+    ]
+  }
+}
