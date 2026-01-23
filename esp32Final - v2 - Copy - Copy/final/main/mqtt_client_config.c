@@ -1,4 +1,151 @@
 
+// #include "mqtt_client_config.h"
+// #include "esp_log.h"
+// #include "driver/ledc.h"
+// #include "motor_controller.h"
+// #include <string.h>
+// #include <stdlib.h>
+
+// static const char *TAG = "ESP_MQTT5";
+// static esp_mqtt_client_handle_t client;
+
+// // External function from app_main
+// extern void mqtt_set_fan_speed_from_text(uint8_t speed);
+
+// // Utility: map function
+// static int map_value(int x, int in_min, int in_max, int out_min, int out_max) {
+//     if (x < in_min) x = in_min;
+//     if (x > in_max) x = in_max;
+//     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+// }
+
+// // ================== Publisher Task ==================
+// void publisher_task(void *pvParameters) {
+//     char msg[16];
+//     while (1) {
+//         snprintf(msg, sizeof(msg), "%d", 50);
+//         mqtt_publish(MQTT_TOPIC_PUB3, msg);
+//         ESP_LOGI(TAG, "📤 Published to %s: %s", MQTT_TOPIC_PUB3, msg);
+//         vTaskDelay(10000 / portTICK_PERIOD_MS);
+//     }
+// }
+
+// // MQTT Event Handler
+// static esp_err_t mqtt_event_handler_cb(esp_mqtt_event_handle_t event) {
+//     client = event->client;
+//     switch (event->event_id) {
+//         case MQTT_EVENT_CONNECTED:
+//             ESP_LOGI(TAG, "✅ Connected to broker");
+            
+//             // Subscribe to all topics
+//             esp_mqtt_client_subscribe(client, MQTT_TOPIC_SUB, 1);  // "text" for fan speed
+//             esp_mqtt_client_subscribe(client, "CO2", 1);
+//             esp_mqtt_client_subscribe(client, "ds18", 1);
+//             esp_mqtt_client_subscribe(client, "level", 1);
+//             esp_mqtt_client_subscribe(client, "sugar", 1);
+            
+//             ESP_LOGI(TAG, "📡 Subscribed to all topics");
+            
+//             xTaskCreate(publisher_task, "publisher_task", 4096, NULL, 5, NULL);
+//             break;
+            
+//         case MQTT_EVENT_DISCONNECTED:
+//             ESP_LOGW(TAG, "⚠️ Disconnected from broker");
+//             break;
+            
+//         case MQTT_EVENT_SUBSCRIBED:
+//             ESP_LOGI(TAG, "📌 Subscribed, msg_id=%d", event->msg_id);
+//             break;
+            
+//         case MQTT_EVENT_DATA: {
+//             char topic[64];
+//             char data[64];
+//             snprintf(topic, event->topic_len + 1, "%.*s", event->topic_len, event->topic);
+//             snprintf(data, event->data_len + 1, "%.*s", event->data_len, event->data);
+//             int value = atoi(data);
+            
+//             ESP_LOGI(TAG, "📥 Data: %s -> %d", topic, value);
+            
+//             // === Fan speed control via "text" topic ===
+//             if (strcmp(topic, MQTT_TOPIC_SUB) == 0) {
+//                 // Value 0-255 controls fan motor speed
+//                 if (value >= 0 && value <= 255) {
+//                     mqtt_set_fan_speed_from_text((uint8_t)value);
+//                     ESP_LOGI(TAG, "🎛️ Fan speed set to: %d", value);
+//                 } else {
+//                     ESP_LOGW(TAG, "⚠️ Invalid fan speed value: %d (must be 0-255)", value);
+//                 }
+//             }
+            
+//             // === Existing logic for CO2 / bowl / sonar / sugar ===
+//             else if (strcmp(topic, "CO2") == 0) {
+//                 if (value > 10) mqtt_publish("CO2T", "AF");
+//                 else mqtt_publish("CO2T", "CF");
+//             }
+//             else if (strcmp(topic, "ds18") == 0) {
+//                 if (value > 30) mqtt_publish("bowlT", "FO");
+//                 else mqtt_publish("bowlT", "FS");
+//             }
+//             else if (strcmp(topic, "level") == 0) {
+//                 if (value > 12) mqtt_publish("sonarT", "PO");
+//                 else mqtt_publish("sonarT", "PS");
+//             }
+//             else if (strcmp(topic, "auto") == 0) {
+//                 if (value < 30) mqtt_publish("sugarT", "FFC");
+//                 else mqtt_publish("sugarT", "FFO");
+//             }
+//             break;
+//         }
+        
+//         case MQTT_EVENT_ERROR:
+//             ESP_LOGE(TAG, "❌ MQTT Event Error");
+//             break;
+            
+//         default:
+//             break;
+//     }
+//     return ESP_OK;
+// }
+
+// static void mqtt_event_handler(void *handler_args, esp_event_base_t base,
+//                                int32_t event_id, void *event_data) {
+//     mqtt_event_handler_cb(event_data);
+// }
+
+// // Start MQTT client
+// esp_err_t mqtt_start(void) {
+//     esp_mqtt_client_config_t mqtt_cfg = {
+//         .broker = {
+//             .address.uri = MQTT_BROKER_URI,
+//         },
+//         .credentials = {
+//             .username = MQTT_BROKER_USER,
+//             .authentication.password = MQTT_BROKER_PASS,
+//             .client_id = MQTT_CLIENT_ID,
+//         },
+//         .session = {
+//             .keepalive = MQTT_KEEPALIVE,
+//             .disable_clean_session = false,
+//             .last_will = {
+//                 .topic = MQTT_LWT_TOPIC,
+//                 .msg = MQTT_LWT_MESSAGE,
+//                 .qos = MQTT_LWT_QOS,
+//                 .retain = MQTT_LWT_RETAIN,
+//             },
+//         },
+//     };
+    
+//     client = esp_mqtt_client_init(&mqtt_cfg);
+//     esp_mqtt_client_register_event(client, ESP_EVENT_ANY_ID, mqtt_event_handler, client);
+//     return esp_mqtt_client_start(client);
+// }
+
+// // Function to publish message
+// void mqtt_publish(const char *topic, const char *msg) {
+//     if (client) {
+//         esp_mqtt_client_publish(client, topic, msg, 0, 1, 0);
+//     }
+// }
 #include "mqtt_client_config.h"
 #include "esp_log.h"
 #include "driver/ledc.h"
@@ -9,8 +156,10 @@
 static const char *TAG = "ESP_MQTT5";
 static esp_mqtt_client_handle_t client;
 
-// External function from app_main
+// External functions from app_main
 extern void mqtt_set_fan_speed_from_text(uint8_t speed);
+extern void mqtt_set_temp_threshold(float threshold);
+extern void mqtt_set_distance_threshold(float threshold);
 
 // Utility: map function
 static int map_value(int x, int in_min, int in_max, int out_min, int out_max) {
@@ -39,12 +188,14 @@ static esp_err_t mqtt_event_handler_cb(esp_mqtt_event_handle_t event) {
             
             // Subscribe to all topics
             esp_mqtt_client_subscribe(client, MQTT_TOPIC_SUB, 1);  // "text" for fan speed
+            esp_mqtt_client_subscribe(client, MQTT_TOPIC_TEMP_THRESHOLD, 1);  // Temperature threshold
+            esp_mqtt_client_subscribe(client, MQTT_TOPIC_DISTANCE_THRESHOLD, 1);  // Distance threshold
             esp_mqtt_client_subscribe(client, "CO2", 1);
             esp_mqtt_client_subscribe(client, "ds18", 1);
             esp_mqtt_client_subscribe(client, "level", 1);
             esp_mqtt_client_subscribe(client, "sugar", 1);
             
-            ESP_LOGI(TAG, "📡 Subscribed to all topics");
+            ESP_LOGI(TAG, "📡 Subscribed to all topics (including threshold/temp and threshold/distance)");
             
             xTaskCreate(publisher_task, "publisher_task", 4096, NULL, 5, NULL);
             break;
@@ -62,12 +213,12 @@ static esp_err_t mqtt_event_handler_cb(esp_mqtt_event_handle_t event) {
             char data[64];
             snprintf(topic, event->topic_len + 1, "%.*s", event->topic_len, event->topic);
             snprintf(data, event->data_len + 1, "%.*s", event->data_len, event->data);
-            int value = atoi(data);
             
-            ESP_LOGI(TAG, "📥 Data: %s -> %d", topic, value);
+            ESP_LOGI(TAG, "📥 Data: %s -> %s", topic, data);
             
             // === Fan speed control via "text" topic ===
             if (strcmp(topic, MQTT_TOPIC_SUB) == 0) {
+                int value = atoi(data);
                 // Value 0-255 controls fan motor speed
                 if (value >= 0 && value <= 255) {
                     mqtt_set_fan_speed_from_text((uint8_t)value);
@@ -77,20 +228,38 @@ static esp_err_t mqtt_event_handler_cb(esp_mqtt_event_handle_t event) {
                 }
             }
             
+            // === Temperature Threshold Control ===
+            else if (strcmp(topic, MQTT_TOPIC_TEMP_THRESHOLD) == 0) {
+                float threshold = atof(data);
+                mqtt_set_temp_threshold(threshold);
+                ESP_LOGI(TAG, "🌡️ Temperature threshold updated to: %.1f°C", threshold);
+            }
+            
+            // === Distance Threshold Control ===
+            else if (strcmp(topic, MQTT_TOPIC_DISTANCE_THRESHOLD) == 0) {
+                float threshold = atof(data);
+                mqtt_set_distance_threshold(threshold);
+                ESP_LOGI(TAG, "💧 Distance threshold updated to: %.1fcm", threshold);
+            }
+            
             // === Existing logic for CO2 / bowl / sonar / sugar ===
             else if (strcmp(topic, "CO2") == 0) {
+                int value = atoi(data);
                 if (value > 10) mqtt_publish("CO2T", "AF");
                 else mqtt_publish("CO2T", "CF");
             }
             else if (strcmp(topic, "ds18") == 0) {
+                int value = atoi(data);
                 if (value > 30) mqtt_publish("bowlT", "FO");
                 else mqtt_publish("bowlT", "FS");
             }
             else if (strcmp(topic, "level") == 0) {
+                int value = atoi(data);
                 if (value > 12) mqtt_publish("sonarT", "PO");
                 else mqtt_publish("sonarT", "PS");
             }
             else if (strcmp(topic, "auto") == 0) {
+                int value = atoi(data);
                 if (value < 30) mqtt_publish("sugarT", "FFC");
                 else mqtt_publish("sugarT", "FFO");
             }

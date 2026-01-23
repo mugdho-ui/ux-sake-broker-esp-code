@@ -18,7 +18,7 @@
 #define LED_BUILTIN 2  // Blue LED on ESP32
 
 // ===================== MQTT CONFIG ======================
-#define MQTT_BROKER "bdtmp.ultra-x.jp"
+#define MQTT_BROKER "153.127.60.247" // #define MQTT_BROKER "bdtmp.ultra-x.jp"
 #define MQTT_PORT 1883
 #define MQTT_USER "admin"
 #define MQTT_PASS "StrongPassword123"
