@@ -21,14 +21,15 @@
 #define UART_BUF_SIZE 2048
 
 // ===================== MQTT CONFIG ======================
-#define MQTT_BROKER_URI "mqtt://153.127.60.247:1883"
+#define MQTT_BROKER_URI "mqtt://bdtmp.ultra-x.jp:1883"
 #define MQTT_BROKER_IP "153.127.60.247"
 #define MQTT_BROKER_PORT 1883
 #define MQTT_USER "admin"
 #define MQTT_PASS "StrongPassword123"
 #define MQTT_CLIENT_ID "ESP32_Bridge"
-#define MQTT_KEEPALIVE 15
-#define MQTT_TIMEOUT_MS 10000
+#define MQTT_KEEPALIVE 60           // Change from 15 to 60
+#define MQTT_TIMEOUT_MS 15000       // Change from 10000 to 15000
+#define MQTT_RECONNECT_INTERVAL_MS 15000  // Change from 10000 to 15000
 
 // MQTT Topics
 #define MQTT_TOPIC_TEMP "ESPX"
@@ -43,7 +44,7 @@
 
 // ===================== TIMING CONFIG ======================
 #define FACTORY_RESET_HOLD_MS 5000
-#define MQTT_RECONNECT_INTERVAL_MS 10000
+
 #define SERIAL_DATA_TIMEOUT_MS 15000
 #define WIFI_RETRY_DELAY_MS 500
 #define WIFI_MAX_RETRIES 30
