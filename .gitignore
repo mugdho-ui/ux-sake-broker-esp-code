@@ -1,0 +1,8 @@
+# ESP-IDF / Arduino build output
+build/
+**/build/
+.vscode/
+.devcontainer/
+*.bin
+*.elf
+*.map
