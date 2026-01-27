@@ -10,6 +10,7 @@ ESP_TOPIC = "ESPX"
 
 
 USERNAME = "admin"  # .env এ যেটা সেট করেছো
+
 PASSWORD = "StrongPassword123"
 
 SEN2_TOPIC = "ESP2X"
